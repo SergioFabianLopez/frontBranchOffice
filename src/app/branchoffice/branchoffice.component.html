@@ -1,0 +1,37 @@
+<!-- <nav class="fh5co-nav" role="navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-xs-6 text-center menu-1">
+                <ul>
+                    <li><a href="/branchoffice">Todo</a></li>
+                    <li><a href="/products">Crear</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav> -->
+
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Direccion</th>
+                <th scope="col">Telefono</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of data">
+                <td>{{item.Name}}</td>
+                <td>{{item.address}}</td>
+                <td>{{item.Telephone}}</td>
+                <td>
+                    <a (click)="deletebranchoffice(item.Id)" class="btn red z-depth-3">Eliminar</a>
+                </td>
+                <td>
+                    <a href="#" class="btn green z-depth-3">Editar</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
